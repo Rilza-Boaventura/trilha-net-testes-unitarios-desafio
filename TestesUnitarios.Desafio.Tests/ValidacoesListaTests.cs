@@ -75,15 +75,18 @@ public class ValidacoesListaTests
         // Assert
         //TODO: Corrigir o Assert.Equal com base no retorno da chamada ao método
         Assert.Equal(9, 9);
+        Assert.Equal(resultadoEsperado, resultado);
+
     }
 
     [Fact]
     public void DeveRetornarOitoNegativoComoMenorNumeroDaLista()
     {
         //TODO: Implementar método de teste
-
+        @@ -84, 12 +91,13 @@ public void  DeveRetornarOitoNegativoComoMenorNumeroDaLista()
         // Arrange
         var lista = new List<int> { 5, -1, -8, 9 };
+        var resultadoEsperado = -8
 
         // Act
         var resultado = _validacoes.RetornarMenorNumeroLista(lista);
@@ -91,5 +94,6 @@ public class ValidacoesListaTests
         // Assert
         //TODO: Corrigir o Assert.Equal com base no retorno da chamada ao método
         Assert.Equal(-8, -8);
+        Assert.Equal(resultadoEsperado, resultado);
     }
 }
